@@ -1,0 +1,8 @@
+Bootstrap: docker
+From: rocker/verse:RVERSION
+
+%post
+    R -q -e 'install.packages("renv"); install.packages("pak"); pak::pak("BH"); pak::pak("BiocParallel")'
+
+%labels
+    Version RVERSION

@@ -1,0 +1,2 @@
+FROM rocker/verse:4.2.2
+RUN R -q -e 'install.packages("renv"); install.packages("pak"); pak::pak("boost"); pak::pak("BiocParallel")'
